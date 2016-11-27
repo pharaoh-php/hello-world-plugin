@@ -1,0 +1,40 @@
+{
+    "name": "pharaoh/hello-world-plugin",
+    "description": "Pharaoh \"Hello, world!\" plugin",
+    "type": "pharaoh-plugin",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Steve Buzonas",
+            "email": "steve@fancyguy.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Pharaoh\\Plugin\\HelloWorld\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Pharaoh\\Plugin\\HelloWorld\\Tests\\": "tests/"
+        }
+    },
+    "require": {
+        "php": ">=7.0",
+        "pharaoh/plugin-api": "^0.1.0"
+    },
+    "require-dev": {
+        "pharaoh/core": "^1.0@dev",
+        "pharaoh/plugin-manager": "^1.0@dev"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        }
+    },
+    "scripts": {
+        "test": [
+            "@composer validate"
+        ]
+    }
+}
